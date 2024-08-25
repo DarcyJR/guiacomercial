@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: 144px;
+    background: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.busca {
+    width: 700px;
+    height: 48px;
+    background: #c3a2a2;
+    border-radius: 50px;
+}
+
+.form-busca {
+    display: flex;
+}
+
+/*input*/
+input[type="text"] {
+    flex: 100;
+    height: 48px;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-size: 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo ao focar no input */
+input[type="text"]:focus {
+    border-color: #ED6B6B;
+    box-shadow: 0 0 8px rgba(237, 107, 107, 0.6);
+    outline: none;
+    /* Remove o contorno padrão */
+}
+
+/* Estilo ao passar o mouse sobre o input */
+input[type="text"]:hover {
+    border-color: #888;
+}
+
+/* Estilo para o placeholder */
+input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/*button*/
+.styled-button {
+    flex: 1;
+    background-color: #ED6B6B;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #CC4B4B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.styled-button:active {
+    background-color: #BB3B3B;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.styled-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(237, 107, 107, 0.4);
+}
+
+.baner {
+    width: 1274px;
+    height: 336px;
+    margin-top: 16px;
+    padding: 16px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    display: flex;
+}
+
+.imagem {
+    flex: 304px;
+    background: #CC4B4B;
+    border-radius: 20px;
+}
+
+.imagem img {
+    width: 304px;
+    border-radius: 20px;
+}
+
+.card {
+    flex: calc(100% - 304px);
+    margin-left: 16px;
+    font-size: 25px;
+}
+
+.card .email a{
+    text-decoration: none;
+    color: #000;
+}
+
+.card .email a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.redes{
+    width: 100%;
+    display: flex;
+    justify-content:end;
+}
+
+.redes i{
+    margin-right: 1rem;
+}
+
+.redes .bi{
+    font-size: 2rem;
+}
+
+.redes a{
+    color: #000;
+}
+
+.redes a:hover{
+    color: #fff;
+}
