@@ -1,5 +1,20 @@
 <?php
 include_once("./config/config.php");
+
+if ($_SERVER['REQUEST_METHOD'] = "GET") {
+    if (isset($_GET['busca']) && !empty($_GET['busca'])) {
+        $busca = isset($_GET['busca']) ? $_GET['busca'] : '';
+         $busca = '%' . $busca . '%';
+
+
+        echo"get";
+        $sql = "SELECT * FROM tabela_empresas";
+        $results = $conn->query($sql);
+    } else {
+        $sql = "SELECT * FROM tabela_empresas";
+        $results = $conn->query($sql);
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +32,8 @@ include_once("./config/config.php");
     <div class="container">
         <header>
             <div class="busca">
-                <form class="form-busca" action="" method="get">
-                    <input type="text">
+                <form class="form-busca" action="inde.php" method="GET">
+                    <input type="text" name="busca">
                     <button class="styled-button" type="submit">
                         <i class="bi bi-search"></i><!--Icone bootstrap-->
                     </button>
@@ -26,9 +41,7 @@ include_once("./config/config.php");
             </div>
         </header>
         <?php
-        $sql = "SELECT * FROM tabela_empresas";
 
-        $results = $conn->query($sql);
 
         //$itens = $result -> fetch_all();
 
